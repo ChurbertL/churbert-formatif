@@ -1,0 +1,103 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KOFI STORE</title>
+  <link rel="stylesheet" href="sp.css">
+</head>
+<body>
+
+<div id="loginPage" class="login-container">
+  <div class="login-box">
+    <h2>KOFI</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Masuk</button>
+    <p id="errorMsg"></p>
+  </div>
+</div>
+
+<div id="shopPage" style="display:none;">
+
+  <div class="navbar">
+    <h2>KOFI STORE</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="menu">
+    <button onclick="showMenu('western')">Western</button>
+    <button onclick="showMenu('asian')">Asian</button>
+    <button onclick="showMenu('drink')">Drink</button>
+    <button onclick="showMenu('dessert')">Dessert</button>
+  </div>
+
+  <div id="western" class="menu-content">
+    <h3>Western Food</h3>
+
+    <div class="card">
+      <h4>Steak</h4>
+  <img src="steak.jpeg" alt="Steak">
+  <p>Rp 120.000</p>
+  <button onclick="addToCart('Steak',120000)">Beli</button>
+</div>
+
+    <div class="card">
+      <h4>Bolognese</h4>
+	<img src="bolognese.jpeg" alt="Bolognese">
+      <p>Rp 50.000</p>
+      <button onclick="addToCart('Bolognese',50000)">Beli</button>
+    </div>
+  </div>
+
+  <div id="asian" class="menu-content" style="display:none;">
+    <h3>Asian Food</h3>
+
+    <div class="card">
+      <h4>Ramen</h4>
+	  <img src="ramen.jpeg" alt="Ramen">
+      <p>Rp 70.000</p>
+      <button onclick="addToCart('Ramen',70000)">Beli</button>
+    </div>
+
+    <div class="card">
+      <h4>Dumplings</h4>
+	  <img src="dumplings.jpeg" alt="Dumplings">
+      <p>Rp 60.000</p>
+      <button onclick="addToCart('Dumplings',60000)">Beli</button>
+    </div>
+  </div>
+
+  <div id="drink" class="menu-content" style="display:none;">
+    <h3>Drinks</h3>
+
+    <div class="card">
+      <h4>Ice Coffee</h4>
+	   <img src="coffee.jpeg" alt="Coffee">
+      <p>Rp 25.000</p>
+      <button onclick="addToCart('Ice Coffee',25000)">Beli</button>
+    </div>
+  </div>
+
+  <div id="dessert" class="menu-content" style="display:none;">
+    <h3>Dessert</h3>
+
+    <div class="card">
+      <h4>Ice Cream</h4>
+	  <img src="icecream.jpeg" alt="Ice Cream">
+      <p>Rp 20.000</p>
+      <button onclick="addToCart('Ice Cream',20000)">Beli</button>
+    </div>
+  </div>
+
+  <div class="cart-box">
+    <h3>Keranjang</h3>
+    <ul id="cartList"></ul>
+    <h4>Total: Rp <span id="totalHarga">0</span></h4>
+  </div>
+
+</div>
+
+<script src="sp.js"></script>
+</body>
+</html>
